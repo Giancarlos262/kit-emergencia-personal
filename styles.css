@@ -1,0 +1,78 @@
+:root {
+  color-scheme: light;
+  --navy: #0b3d72;
+  --yellow: #ffd33d;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #071f37; font-family: Arial, Helvetica, sans-serif; }
+body { min-height: 100%; }
+.page-shell { width: 100%; display: flex; justify-content: center; padding: 0; }
+.interactive-poster {
+  position: relative;
+  width: min(100%, 941px);
+  line-height: 0;
+  background: #fff;
+}
+.interactive-poster > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.hotspot {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 211, 61, .22);
+}
+.hotspot:focus-visible {
+  outline: 4px solid var(--yellow);
+  outline-offset: -4px;
+  background: rgba(255, 211, 61, .14);
+}
+@media (hover: hover) and (pointer: fine) {
+  .hotspot:hover { background: rgba(255, 255, 255, .08); box-shadow: inset 0 0 0 2px rgba(255, 211, 61, .55); }
+}
+.video { width: 29.8%; height: 11.2%; }
+.v1 { left: 3.1%;  top: 35.0%; }
+.v2 { left: 35.1%; top: 35.0%; }
+.v3 { left: 67.0%; top: 35.0%; }
+.v4 { left: 3.1%;  top: 47.2%; }
+.v5 { left: 35.1%; top: 47.2%; }
+.v6 { left: 67.0%; top: 47.2%; }
+.phone { top: 84.6%; height: 7.0%; }
+.p123 { left: 3.4%; width: 16.0%; }
+.p119 { left: 20.4%; width: 18.1%; }
+.p125 { left: 39.8%; width: 18.1%; }
+.p132 { left: 59.1%; width: 18.1%; }
+.p144 { left: 78.5%; width: 18.0%; }
+.video-dialog {
+  width: min(94vw, 760px);
+  max-width: 760px;
+  border: 0;
+  padding: 0;
+  border-radius: 18px;
+  background: #071f37;
+  color: #fff;
+  overflow: hidden;
+}
+.video-dialog::backdrop { background: rgba(0,0,0,.82); }
+.dialog-card { width: 100%; }
+.dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; background: var(--navy); }
+.dialog-head h2 { margin: 0; font-size: 18px; line-height: 1.25; }
+.close-button {
+  width: 44px; height: 44px; flex: 0 0 44px;
+  border-radius: 50%; border: 0; background: #fff; color: #071f37;
+  font-size: 30px; line-height: 1; cursor: pointer;
+}
+.video-dialog video { display: block; width: 100%; max-height: 78vh; background: #000; }
+@media (max-width: 420px) {
+  .dialog-head h2 { font-size: 16px; }
+}
