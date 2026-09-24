@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b3d72">
+  <meta name="description" content="Kit de Emergencia Personal: videos educativos y teléfonos de interés ante emergencias.">
+  <title>Kit de Emergencia Personal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell" aria-label="Guía del Kit de Emergencia Personal">
+    <section class="interactive-poster" aria-label="Página principal del kit">
+      <img src="assets/pagina-qr.png" alt="Kit de Emergencia Personal con videos educativos, contenido del kit y teléfonos de emergencia" width="941" height="1672">
+
+      <button class="hotspot video v1" type="button" data-video="videos/01-durante-sismo.mp4" data-title="Durante un sismo" aria-label="Reproducir video: Durante un sismo"></button>
+      <button class="hotspot video v2" type="button" data-video="videos/02-despues-sismo.mp4" data-title="Después del sismo" aria-label="Reproducir video: Después del sismo"></button>
+      <button class="hotspot video v3" type="button" data-video="videos/03-fuga-gas.mp4" data-title="Fuga de gas" aria-label="Reproducir video: Fuga de gas"></button>
+      <button class="hotspot video v4" type="button" data-video="videos/04-hemorragia-externa.mp4" data-title="Hemorragia externa" aria-label="Reproducir video: Hemorragia externa"></button>
+      <button class="hotspot video v5" type="button" data-video="videos/05-uso-extintor.mp4" data-title="Uso del extintor" aria-label="Reproducir video: Uso del extintor"></button>
+      <button class="hotspot video v6" type="button" data-video="videos/06-preparacion-previa.mp4" data-title="Preparación previa" aria-label="Reproducir video: Preparación previa"></button>
+
+      <a class="hotspot phone p123" href="tel:123" aria-label="Llamar al 123 Emergencias"></a>
+      <a class="hotspot phone p119" href="tel:119" aria-label="Llamar al 119 Bomberos"></a>
+      <a class="hotspot phone p125" href="tel:125" aria-label="Llamar al 125 Ambulancia"></a>
+      <a class="hotspot phone p132" href="tel:132" aria-label="Llamar al 132 Cruz Roja"></a>
+      <a class="hotspot phone p144" href="tel:144" aria-label="Llamar al 144 Defensa Civil"></a>
+    </section>
+  </main>
+
+  <dialog id="videoDialog" class="video-dialog" aria-labelledby="videoTitle">
+    <div class="dialog-card">
+      <div class="dialog-head">
+        <h2 id="videoTitle">Video educativo</h2>
+        <button id="closeDialog" class="close-button" type="button" aria-label="Cerrar video">×</button>
+      </div>
+      <video id="videoPlayer" controls playsinline preload="metadata"></video>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
